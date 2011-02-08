@@ -1,0 +1,23 @@
+*** marks the current thing I'm working on.
+
+Subjective Logic:
+	-***New and improved makefile.
+	-figure out how to recognize opinions and betas. I was thinking a map between sub_frames and opinions/betas. It should probably be seperate, but I'm just not sure. Remember Relative Automicity! Maybe state the sub_frame involved, and that will figure the atomicity.
+	-Add back in the ability to add opinions to the interface again.
+	-add macros for surpressing output, and for switching the process functions from returning a string, and returning void instead. ALSO be sure to turn the error strings like when a user doesn't put in y or n for a query, to throw an exception instead of returning a string. This way if input is sent to it, the client will know the program got busted up.
+	-Remove Beta_Opinion completely and put most of it's functionality into Beta... the rest can probably be thrown out. remember consensus uses beta_opinion... convert those uses to beta.
+	-add exception handling. Ie. for incorrect input [remember the functions are passed the stream, not a string.]
+	-create preprocessor function that takes the in stream and takes any commands that are global, like help, or seeing what indices correspond to what atoms.
+	-Use meta programming to automatically create the enum? Maybe. I'm not exactly sure how this would work, but I just fell I could save a bunch of code this way.
+	-Ability to save the Betas and Opinions created to a file and to import betas and opinions from a file. [see low priority * for more info]
+
+DSS:
+	-***start working on stage1 functions. Using WORKFLOW to stay on track. Perhaps setup mantis on my own server?
+
+--LOW PRIORITY--
+-extend the ostringstream class to include a tab incrementer, for nested output data. My use in subjlogic would be to output toString() data and have it indented to be able to tell what is in what, more easily. For example toString on a frame would output It's atoms without tabs, then output the subframes, and the subframes would output their atoms, but indented once.
+-Create another executable for taking survey data and piping it into main in an appropriate fashion. So while main will ask for r and s for each beta, the executable I am proposing would take the question, the choices, and the number of people who choose each choice, then pipe it to main. The point is to shorten the input required to get beta's while keeping programs as generic as possible.
+
+*In the end I think survey data will be piped to subjlogic, then our UI will automatically take the data as evidence in a frame, and create a beta and save the beta. Then as more data comes in we'll process that and use averaging consensus to fuse the betas and save the new beta.
+Although thinking about it now, subj_logic is more of a secondary tool. So likely it will not be needed in real time, but rather as a query tool for after data has been collected to get subj_logic perspective on the data. However using the method I mentioned above you could get some realtime stream going for some use.
+I'm still not entirely sure how the DSS will pan out.

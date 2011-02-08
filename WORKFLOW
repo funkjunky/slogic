@@ -1,0 +1,28 @@
+This document describes how my process is going to go with the DSS.
+
+First some definitions:
+
+FIRST STAGE: This is the program to collect and process the data from the surveys. This takes the xml data from each survey response and processes it into a more useful form of data. 
+The simplest use would be to simply sum the responses of multiple choices, however with things like text responses, their is more involved.
+
+SECOND STAGE: This is the program to display the processed data in it's raw form. This is meant for experts to look at to aid their development of STAGE THREE. It can also be used to help the experts are making decisions, by giving them raw data.
+
+THIRD STAGE: This is the actual DSS. It will guide the user. I'm not sure how it will be developed yet. I do know the work flow however, and that I will be building a library for it, so it can be easily extended. Even when I do figure out what to do, I know the code will always require extension and modification.
+
+WORKFLOW:
+1. FIRST STAGE Beta
+	-create functions for tallying
+		-TallyQuestionResponses
+		-TallySurveysCompleted
+		-TallyAllQuestionsResonses
+	-create functions for filtering
+	-create functions for alerts (use functors for now)
+	-Rinse and repeat till satisified
+2. SECOND STAGE
+3. THIRD STAGE Alpha
+4. FIRST STAGE Beta 2
+5. THIRD STAGE Beta
+6. Get feedback on current THIRD STAGE from experts (Dr. Snowdon?)
+7. FIRST STAGE version 1.x (initially x = 0)
+8. THIRD STAGE beta x (initially x = 2)
+9. repeat 6-8, incrementing x each time.
